@@ -23,6 +23,8 @@ To use the plugin
 
 * Copy ```example/css/login.style``` to ```your/current/theme/css/login.css```
 * visit the login page to see the new style
+
+![ScreenShot](https://raw.github.com/hyyan/login-style/master/screenshot-2.png)
  
 ## How to install
 
@@ -67,6 +69,7 @@ add_filter('Hyyan\LoginStyle.options', function(array $default) {
 
     return $default;
 });
+```
 
 ## Contributing
 
