@@ -41,14 +41,10 @@ class HyyanLoginStyle {
         if (!$options['path'])
             return false;
 
-        ob_start();
-        if (!file_exists($file = get_template_directory() . $options['path'])) {
-            printf('Login Style "%s" does not exists', $file);
-            return false;
-        }
-        
-        include ($file);
-        printf('<style type="text/css">%s</style>', ob_get_clean());
+        printf(
+                '<link rel="stylesheet" type="text/css" href="%s" media="all" />'
+                , get_template_directory_uri() . $options['path']
+        );
     }
 
     /**

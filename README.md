@@ -12,7 +12,6 @@ Wordpress plugin to allow themes to add their own login page style
 ## Features
 
 * Add your own login style which play well with your theme
-* You can use a php file which output css markup instead of css file 
 * check the remember me checkbox by default
 
 ## Example
@@ -65,7 +64,7 @@ in the following example :
 
 add_filter('Hyyan\LoginStyle.options', function(array $default) {
 
-    $default['path'] = '/login-style.css.php';
+    $default['path'] = '/my-login-style.css';
 
     return $default;
 });
