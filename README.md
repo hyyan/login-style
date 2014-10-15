@@ -15,6 +15,15 @@ Wordpress plugin to allow themes to add their own login page style
 * You can use a php file which output css markup instead of css file 
 * check the remember me checkbox by default
 
+## Example
+
+The plugin comes with an example to see how the plugin works
+
+To use the plugin 
+
+* Copy ```example/css/login.style``` to ```your/current/theme/css/login.css```
+* visit the login page to see the new style
+ 
 ## How to install
 
 ### Classical way
