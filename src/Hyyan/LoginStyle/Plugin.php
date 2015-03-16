@@ -8,17 +8,21 @@
  * file that was distributed with this source code.
  */
 
+namespace Hyyan\LoginStyle;
+
 /**
- * HyyanLoginStyle
+ * LoginStyle plugin
  *
  * @author Hyyan
  */
-class HyyanLoginStyle {
+class Plugin
+{
 
     /**
      * Constrcut the plugin
      */
-    public function __construct() {
+    public function __construct()
+    {
         add_action('login_head', array($this, 'addLoginStyle'));
         add_filter('login_footer', array($this, 'checkRememberMe'));
     }
@@ -26,7 +30,8 @@ class HyyanLoginStyle {
     /**
      * Check the remember my checkbox if option is enabled
      */
-    function checkRememberMe() {
+    function checkRememberMe()
+    {
         $options = $this->getOptions();
         if (true == $options['check_remember_me']) {
             print("<script>document.getElementById('rememberme').checked = true;</script>");
@@ -36,7 +41,8 @@ class HyyanLoginStyle {
     /**
      * Add the login style file
      */
-    public function addLoginStyle() {
+    public function addLoginStyle()
+    {
         $options = $this->getOptions();
         if (!$options['path'])
             return false;
@@ -52,7 +58,8 @@ class HyyanLoginStyle {
      * 
      * @return array
      */
-    public function getOptions() {
+    public function getOptions()
+    {
         $default = array(
             // path relative to the theme dir
             'path' => '/css/login.css',

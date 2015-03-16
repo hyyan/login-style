@@ -2,22 +2,38 @@
     Author     : Hyyan
 */
 
-
-body.login {
-    background: #021a2b;
+body.login{
+    background: #253E66;
 }
 
 #login {
     padding: 20px;
 }
+ 
+/* hide logo */
+.login h1 a {
+    display: none;
+}
 
+/* handle form*/
 .login form {
+    margin-top: 150px;
     margin-left:auto;
     margin-right:auto;
     padding:30px;
-    border: 1px solid rgba(0,0,0,.2);
+    border: 1px solid rgba(239, 101, 85,.2);
     background-clip: padding-box;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
-    overflow: hidden;
+    background: rgba(239, 101, 85,0.9);
+    box-shadow: 0 0 13px 3px rgba(194, 157, 78,.5);
+    overflow: hidden; 
+}
+
+.login form label {
+    color: #fff !important;
+}
+
+/* login button */
+.wp-core-ui .button-primary {
+    border-color: #E3DFD7 !important;
+    background: #C29D4E !important ;
 }
